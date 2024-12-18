@@ -90,8 +90,10 @@ def auth():
                             st.error(message)
 
         else:
-            st.title(f"Welcome, {st.session_state.user["name"]}!")
-            st.write(f"Role: {st.session_state.user_role}")
+            name = st.session_state.user["name"]
+            role = st.session_state.user_role
+            st.title(f"Welcome, {name}!")
+            st.write(f"Role: {role}")
             if st.button("Logout"):
                 st.session_state.user = None
                 st.session_state.authenticated = False

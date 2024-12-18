@@ -1,6 +1,6 @@
 # pages/3_Admin_Dashboard.py
 import streamlit as st
-from app import users, st
+from utils.db import users
 import bcrypt
 from utils.auth import auth
 import time
